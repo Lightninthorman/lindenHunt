@@ -18,7 +18,7 @@
 
 <script>
 export default {
-    name:"home",
+    name:"navicon",
     props:["pages","currentPage"],
     methods:{
         pageLinkStyle: function(page){
