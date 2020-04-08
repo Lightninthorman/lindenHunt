@@ -1,19 +1,22 @@
 <template>
   <div >
     <page-header :pages="pages" :currentPage="currentPage"></page-header>
-    <home :pages="pages" :currentPage="currentPage" @pageChange="pageChange"></home>
+    <navicon :pages="pages" :currentPage="currentPage" @pageChange="pageChange"></navicon>
+    <maps v-if="currentPage === 'maps'"></maps>
   </div>
 </template>
 
 <script>
 import PageHeader from "./components/PageHeader.vue";
-import Home from "./components/Home.vue";
+import Navicon from "./components/Navicon.vue";
+import Maps from "./components/Maps.vue";
 
 export default {
     name: "App",
     components: {
         PageHeader,
-        Home
+        Navicon,
+        Maps
     },
     data: function(){
     return {
