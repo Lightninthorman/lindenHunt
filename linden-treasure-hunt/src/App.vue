@@ -1,8 +1,20 @@
 <template>
-  <div >
-    <page-header :pages="pages" :currentPage="currentPage"></page-header>
-    <navicon :pages="pages" :currentPage="currentPage" @pageChange="pageChange"></navicon>
-    <maps v-if="currentPage === 'maps'"></maps>
+  <div>
+    <page-header
+        :pages="pages"
+        :currentPage="currentPage"
+    >
+    </page-header>
+    <navicon
+        :pages="pages"
+        :currentPage="currentPage"
+        @pageChange="pageChange"
+    >
+    </navicon>
+    <maps
+        v-if="currentPage === 'maps'"
+    >
+    </maps>
   </div>
 </template>
 
@@ -10,6 +22,7 @@
 import PageHeader from "./components/PageHeader.vue";
 import Navicon from "./components/Navicon.vue";
 import Maps from "./components/Maps.vue";
+
 
 export default {
     name: "App",
@@ -21,6 +34,7 @@ export default {
     data: function(){
     return {
         currentPage: "maps",
+        currentMap:{},
         pages: [
             {
                 page:"home",
@@ -56,7 +70,7 @@ export default {
 },
 methods:{
     pageChange: function(newPage){
-        this.currentPage = newPage
+        this.currentPage = newPage;
     }
 }
 };
