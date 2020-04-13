@@ -13,8 +13,14 @@
     </navicon>
     <maps
         v-if="currentPage === 'maps'"
+        :maps="allMaps"
     >
     </maps>
+    <challenges
+        v-if="currentPage === 'challenges'"
+
+    >
+</challenges>
   </div>
 </template>
 
@@ -22,19 +28,22 @@
 import PageHeader from "./components/PageHeader.vue";
 import Navicon from "./components/Navicon.vue";
 import Maps from "./components/Maps.vue";
-
+import Challenges from "./components/Challenges.vue";
+import allMaps from "@/data.js";
 
 export default {
     name: "App",
     components: {
         PageHeader,
         Navicon,
-        Maps
+        Maps,
+        Challenges
     },
     data: function(){
     return {
         currentPage: "maps",
         currentMap:{},
+        allMaps: allMaps,
         pages: [
             {
                 page:"home",

@@ -29,7 +29,7 @@ import maps from "@/data.js";
 import ShowMap from "./ShowMap.vue";
 
 let myMaps = maps
-console.log(myMaps[0].details.length);
+
 export default {
     name:"maps",
     data: function (){
@@ -90,6 +90,7 @@ export default {
     }
 
     .page-options{
+        height:95%;
         border:1px solid black;
         text-align: center;
         cursor:pointer;
