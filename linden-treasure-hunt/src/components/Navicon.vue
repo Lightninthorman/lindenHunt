@@ -1,19 +1,19 @@
 <template lang="html">
-    <main class="m-2">
-        <div class="options-container row">
+    <nav class="container-fluid">
+        <div class="row">
             <div class=" col-md-3"
                 v-for="(item,index) in pages"
                 :class="pageLinkStyle(item.page)"
                 :key="index"
                 @click="$emit('pageChange', item.page)">
-                <div class="page-options col-md-offset-3 p-2 my-2">
+                <div class="page-options p-2 my-2">
                     <h3>{{item.display}}</h3>
                 </div>
 
             </div>
         </div>
 
-    </main>
+    </nav>
 </template>
 
 <script>
@@ -31,10 +31,16 @@ export default {
 </script>
 
 <style lang="css" scoped>
+    .options-container{
+        box-sizing: border-box;
+        border:1px solid green;
+    }
+
     .page-options{
         border:1px solid black;
         text-align: center;
         cursor:pointer;
+
 
 
     }
