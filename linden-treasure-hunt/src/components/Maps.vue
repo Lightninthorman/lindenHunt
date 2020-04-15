@@ -25,16 +25,15 @@
 </template>
 
 <script>
-import maps from "@/data.js";
+
 import ShowMap from "./ShowMap.vue";
 
-let myMaps = maps
 
 export default {
     name:"maps",
+    props:['maps'],
     data: function (){
         return {
-            maps: myMaps,
             showMap: false,
             selectedMap:{}
         }

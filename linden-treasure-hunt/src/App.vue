@@ -18,6 +18,7 @@
     </maps>
     <challenges
         v-if="currentPage === 'challenges'"
+        :maps="allMaps"
 
     >
 </challenges>
