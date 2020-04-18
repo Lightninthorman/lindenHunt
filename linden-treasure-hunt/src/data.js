@@ -4,7 +4,21 @@ const maps = [{
     stamp: "/images/treasure/earth.jpg",
     level:"easy",
     location: "neighborhood",
-    details:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    details:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    clues:[
+        {
+            clue:"Start down Winslow Drive toward the end of the circle. Be on the lookout for the fire alarm at the farthest end of the circle.",
+            image: "/images/clues/alarm.jpg"
+        },
+        {
+            clue:"At the fire alarm search the houses for number 10. Or, pretend you're educating your child by turning it into a math problem or a counting question so they come up with 10 as the answer. Then pat your back for being a great parent.",
+            image:"images/clues/myhouse.jpg"
+        },
+        {
+            clue:"Head up the driveway and be on the lookout for a rock in the wall that doesn't look like the others.",
+            image:"images/clues/rockwall1.jpg"
+        }
+    ]
 },
 {
     id:2,
