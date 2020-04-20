@@ -4,19 +4,22 @@ const maps = [{
     stamp: "/images/treasure/earth.jpg",
     level:"easy",
     location: "neighborhood",
-    details:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    details:"A quick and easy hunt in the neighborhood to get everyone excited. Or, more honestly, to see if this is something they're into or not.",
     clues:[
         {
             clue:"Start down Winslow Drive toward the end of the circle. Be on the lookout for the fire alarm at the farthest end of the circle.",
-            image: "/images/clues/alarm.jpg"
+            image: "/images/clues/alarm.jpg",
+            clicked:false
         },
         {
             clue:"At the fire alarm search the houses for number 10. Or, pretend you're educating your child by turning it into a math problem or a counting question so they come up with 10 as the answer. Then pat your back for being a great parent.",
-            image:"images/clues/myhouse.jpg"
+            image:"images/clues/myhouse.jpg",
+            clicked:false
         },
         {
             clue:"Head up the driveway and be on the lookout for a rock in the wall that doesn't look like the others.",
-            image:"images/clues/rockwall1.jpg"
+            image:"images/clues/rockwall1.jpg",
+            clicked:false
         }
     ]
 },
