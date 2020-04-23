@@ -1,10 +1,10 @@
 <template>
   <div>
-    <page-header
+    <!-- <page-header
         :pages="pages"
         :currentPage="currentPage"
     >
-    </page-header>
+    </page-header> -->
     <navicon
         :pages="pages"
         :currentPage="currentPage"
@@ -19,14 +19,13 @@
     <challenges
         v-if="currentPage === 'challenges'"
         :maps="allMaps"
-
     >
-</challenges>
+    </challenges>
   </div>
 </template>
 
 <script>
-import PageHeader from "./components/PageHeader.vue";
+// import PageHeader from "./components/PageHeader.vue";
 import Navicon from "./components/Navicon.vue";
 import Maps from "./components/Maps.vue";
 import Challenges from "./components/Challenges.vue";
@@ -35,14 +34,14 @@ import allMaps from "@/data.js";
 export default {
     name: "App",
     components: {
-        PageHeader,
+        // PageHeader,
         Navicon,
         Maps,
         Challenges
     },
     data: function(){
     return {
-        currentPage: "maps",
+        currentPage: "home",
         currentMap:{},
         allMaps: allMaps,
         pages: [
@@ -85,3 +84,9 @@ methods:{
 }
 };
 </script>
+
+<style >
+    body{
+        background-color: linen;
+    }
+</style>
