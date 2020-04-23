@@ -1,17 +1,53 @@
 <template lang="html">
     <nav class="container-fluid">
-        <div class="row">
-            <div class=" col-md-3"
+        <div class="logo" @click="$emit('pageChange', 'home')">
+            <img src="/images/house_icon.png" alt="Linden Commons Treasure Hunt House Icon">
+        </div>
+        <img id="hamburger" class="showBurger" src="/images/hamburger_icon_1.png" data-toggle="modal" data-target="#navMenuModal"/>
+
+        <div class="modal fade" id="navMenuModal" tabindex="-1" role="dialog" aria-labelledby="navMenuModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="navMenuModal">Linden Commons Treasure Hunt</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body d-flex flex-column align-items-center">
+                        <div class="page-options close"
+                        data-dismiss="modal"
+                            v-for="(item,index) in pages"
+                            :class="pageLinkStyle(item.page)"
+                            :key="index"
+                            @click="$emit('pageChange', item.page)">
+
+                                <h3>{{item.display}}</h3>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="showAll">
+            <div class="page-options mx-2"
                 v-for="(item,index) in pages"
                 :class="pageLinkStyle(item.page)"
                 :key="index"
                 @click="$emit('pageChange', item.page)">
-                <div class="page-options p-2 my-2">
+
                     <h3>{{item.display}}</h3>
-                </div>
+
 
             </div>
         </div>
+
+
 
     </nav>
 </template>
@@ -31,21 +67,79 @@ export default {
 </script>
 
 <style lang="css" scoped>
-    .options-container{
-        box-sizing: border-box;
+
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         border:1px solid green;
     }
 
+    img{
+        width:100px;
+        cursor: pointer;
+    }
+
     .page-options{
-        border:1px solid black;
         text-align: center;
         cursor:pointer;
+        text-decoration: none;
+        background-size: 0 5px;
+        background-image: linear-gradient(sandybrown, sandybrown);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        transition: .2s;
+    }
 
-
-
+    .page-options:hover{
+        background-size: 100% 5px;
+        transition: .5s;
     }
 
     .grey{
         filter:drop-shadow(5px 5px 5px black);
     }
+
+    .modal-content{
+        background-color:linen;
+    }
+
+    .showBurger{
+        display:block;
+    }
+
+    .showAll{
+        display:none;
+    }
+
+
+
+    #hamburger{
+        filter:invert(.7);
+        width:50px;
+        transition: .2s;
+    }
+
+    #hamburger:hover, #hamburger:active{
+        filter: invert(.3);
+        transition: .2s;
+    }
+
+    @media only screen and (min-width: 768px){
+        nav{
+            align-items: flex-end;
+        }
+
+        .showBurger{
+            display:none;
+        }
+
+        .showAll{
+            display:flex;
+            flex-direction:row;
+            justify-content: center;
+        }
+    }
+
 </style>

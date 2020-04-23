@@ -2,8 +2,13 @@
     <div class="">
         <h1>Challenges</h1>
         <div class="container setTreasureAmnt my-5">
-            <label for="numberOfTreasures">How many treasures do you want to find for this challenge? There are currently only {{maps.length}} treasures.</label>
+            <label for="numberOfTreasures">How many treasures do you want to find for this challenge? There are currently only 6 treasures.</label>
             <input type="number" id="numberOfTreasures" name="numberOfTreasures" min="1" max="6" v-model.number="numberOfTreasures">
+            <div class="d-flex justify-content-center">
+                <label for="needParents">Remove treasures that require parents to come along (because they are farther in the woods)?</label>
+                <input type="checkbox" id="needParents" class="mt-1 ml-1" v-model="parentsNeeded">
+            </div>
+
             <button type="button" class="mt-3" @click="buildChallenge">Build Challenge</button>
             <p>{{numberOfTreasures}}</p>
         </div>
@@ -102,7 +107,8 @@ export default {
                     alt:'empty'
                 }
             ],
-            numberOfTreasures:""
+            numberOfTreasures:"",
+            parentsNeeded:false
         }
     },
     methods:{
@@ -162,6 +168,16 @@ export default {
 
             //create a copy of the maps prop
             let newMaps = [...this.maps];
+
+            if(this.parentsNeeded){
+                newMaps = newMaps.filter(function(map){
+                    return map.parentsNeeded === false;
+                });
+                if (this.numberOfTreasures === this.maps.length) {
+                    this.numberOfTreasures = newMaps.length;
+                }
+
+            }
 
             //loop through the number of treasures the user inputs
             for(let i = 0; i < this.numberOfTreasures; i++ ){
@@ -225,6 +241,7 @@ input{
     flex-direction: column;
     align-items: center;
 }
+
 
 @media only screen and (min-width: 768px){
     img{

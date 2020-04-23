@@ -21,7 +21,8 @@ const maps = [{
             image:"images/clues/rockwall1.jpg",
             clicked:false
         }
-    ]
+    ],
+    parentsNeeded:false
 },
 {
     id:2,
@@ -29,7 +30,8 @@ const maps = [{
     stamp: "/images/treasure/ufo.jpg",
     level:"medium",
     location: "woods",
-    details:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    details:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    parentsNeeded:false
 },
 {
     id:3,
@@ -37,7 +39,8 @@ const maps = [{
     stamp: "/images/treasure/rocket.jpg",
     level:"easy",
     location: "woods",
-    details:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    details:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    parentsNeeded:true
 },
 {
     id:4,
@@ -45,7 +48,8 @@ const maps = [{
     stamp: "/images/treasure/sattelite.jpg",
     level:"hard",
     location: "woods",
-    details:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    details:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    parentsNeeded:true
 },
 {
     id:5,
@@ -53,7 +57,8 @@ const maps = [{
     stamp: "/images/treasure/star.jpg",
     level:"easy",
     location: "neighborhood",
-    details:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    details:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    parentsNeeded:false
 },
 {
     id:6,
@@ -61,7 +66,8 @@ const maps = [{
     stamp: "/images/treasure/sun.jpg",
     level:"medium",
     location: "neighborhood",
-    details:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    details:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    parentsNeeded:false
 }
 ]
 
