@@ -11,6 +11,11 @@
         @pageChange="pageChange"
     >
     </navicon>
+    <home
+        v-if="currentPage === 'home'"
+
+    >
+</home>
     <maps
         v-if="currentPage === 'maps'"
         :maps="allMaps"
@@ -21,14 +26,20 @@
         :maps="allMaps"
     >
     </challenges>
+    <new
+        v-if="currentPage === 'new'"
+    >
+    </new>
   </div>
 </template>
 
 <script>
 // import PageHeader from "./components/PageHeader.vue";
 import Navicon from "./components/Navicon.vue";
+import Home from "./components/Home.vue";
 import Maps from "./components/Maps.vue";
 import Challenges from "./components/Challenges.vue";
+import New from "./components/New.vue";
 import allMaps from "@/data.js";
 
 export default {
@@ -36,8 +47,10 @@ export default {
     components: {
         // PageHeader,
         Navicon,
+        Home,
         Maps,
-        Challenges
+        Challenges,
+        New
     },
     data: function(){
     return {
@@ -86,7 +99,18 @@ methods:{
 </script>
 
 <style >
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700&display=swap');
+
+    /* font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif; */
+
     body{
         background-color: linen;
+        font-family: 'Poppins', sans-serif;
     }
+
+    h1,h2,h3,h4,h5,h6{
+        font-family: 'Raleway', sans-serif;
+    }
+
 </style>

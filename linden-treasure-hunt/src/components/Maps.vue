@@ -1,7 +1,11 @@
 <template lang="html">
     <main class="container-fluid">
-        <h2>Maps</h2>
+
         <div :style="mapShowStyle">
+            <div class="my-4">
+                <h2>Maps</h2>
+                <p>Each map has clues that will lead you to the stamp treasure shown. Select a map below to go to the clues page and start collecting treasure in your notebooks! (The level rating for each is a guess)</p>
+            </div>
             <div class="row" >
                 <div class="col-md-3"
                     v-for="(map,index) in maps"
@@ -80,6 +84,11 @@ export default {
         height:90px;
     }
 
+    h2{
+        text-align: center;
+        font-size: 700;
+    }
+
     h3{
         text-align: center;
     }
@@ -90,9 +99,10 @@ export default {
 
     .page-options{
         height:95%;
-        border:1px solid black;
+        border:3px solid #7D7672;
         text-align: center;
         cursor:pointer;
+        border-radius: 10px;
 
 
 

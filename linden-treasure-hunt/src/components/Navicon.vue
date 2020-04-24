@@ -1,15 +1,16 @@
 <template lang="html">
-    <nav class="container-fluid">
-        <div class="logo" @click="$emit('pageChange', 'home')">
+    <nav class="container-fluid mt-5 mb-4">
+        <!-- <div class="logo" @click="$emit('pageChange', 'home')">
             <img src="/images/house_icon.png" alt="Linden Commons Treasure Hunt House Icon">
-        </div>
+        </div> -->
+        <h1 class="text-center m-1" @click="$emit('pageChange', 'home')">Linden Commons Treasure Hunt</h1>
         <img id="hamburger" class="showBurger" src="/images/hamburger_icon_1.png" data-toggle="modal" data-target="#navMenuModal"/>
 
         <div class="modal fade" id="navMenuModal" tabindex="-1" role="dialog" aria-labelledby="navMenuModal" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="navMenuModal">Linden Commons Treasure Hunt</h5>
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title w-100 mx-5" id="navMenuModal">Linden Commons Treasure Hunt</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -31,9 +32,6 @@
             </div>
         </div>
 
-
-
-
         <div class="showAll">
             <div class="page-options mx-2"
                 v-for="(item,index) in pages"
@@ -41,7 +39,7 @@
                 :key="index"
                 @click="$emit('pageChange', item.page)">
 
-                    <h3>{{item.display}}</h3>
+                    <h5>{{item.display}}</h5>
 
 
             </div>
@@ -68,12 +66,23 @@ export default {
 
 <style lang="css" scoped>
 
+    h1{
+        font-size: 26px;
+        font-weight: 700;
+        width:300px;
+    }
+
     nav{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        border:1px solid green;
+
+    }
+    button{
+        position:absolute;
+        top:20px;
+        right:20px;
     }
 
     img{
@@ -86,7 +95,7 @@ export default {
         cursor:pointer;
         text-decoration: none;
         background-size: 0 5px;
-        background-image: linear-gradient(sandybrown, sandybrown);
+        background-image: linear-gradient(#D0CCFC, #D0CCFC);
         background-repeat: no-repeat;
         background-position: center bottom;
         transition: .2s;
@@ -99,10 +108,12 @@ export default {
 
     .grey{
         filter:drop-shadow(5px 5px 5px black);
+        background-image: none;
     }
 
     .modal-content{
         background-color:linen;
+        position:relative;
     }
 
     .showBurger{
@@ -129,6 +140,10 @@ export default {
     @media only screen and (min-width: 768px){
         nav{
             align-items: flex-end;
+        }
+
+        h1{
+            font-size: 30px;
         }
 
         .showBurger{
