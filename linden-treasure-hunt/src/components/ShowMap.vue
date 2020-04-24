@@ -1,29 +1,33 @@
 <template lang="html">
-    <div class="row m-2">
-        <div class="col-md-2 my-2 d-flex justify-content-center align-items-start">
-            <img :src="map.stamp" :alt="map.title" class="stamp-image">
-        </div>
-        <div class="col-md-10 my-2 p-2">
-            <h1>{{map.title}}</h1>
-            <p><span>Level: </span>{{map.level}}</p>
-            <p><span>Location: </span>{{map.location}}</p>
-            <p><span>Details: </span>{{map.details}}</p>
-            <div>
-                <h3 class="mb-3">Map Clues</h3>
-                <button type="button" class="mb-4" @click="toggleAllShow">Show all Image Clues</button>
-                <div class="mb-4 clues p-2" v-for="(item, key) in map.clues" :key="key">
-                    <div>
-                        <p>{{item.clue}}</p>
-                        <div class="d-flex justify-content-center">
-                            <img class="clue-image" :src="imageToShow(item)" alt="hidden clue" @click="toggleShow($event, item)">
+    <div>
+        <p>Click on the question marks to reveal a picture clue if the descriptions aren't clear enough.</p>
+        <div class="row m-2">
+            <div class="col-md-2 my-2 d-flex justify-content-center align-items-start">
+                <img :src="map.stamp" :alt="map.title" class="stamp-image">
+            </div>
+            <div class="col-md-10 my-2 p-2">
+                <h1>{{map.title}}</h1>
+                <p><span>Level: </span>{{map.level}}</p>
+                <p><span>Location: </span>{{map.location}}</p>
+                <p><span>Details: </span>{{map.details}}</p>
+                <div>
+                    <h3 class="mb-3">Map Clues</h3>
+                    <button type="button" class="mb-4" @click="toggleAllShow">{{showAllImages ? "Hide all Image Clues": "Show all Image Clues"}}</button>
+                    <div class="mb-4 clues p-2" v-for="(item, key) in map.clues" :key="key">
+                        <div>
+                            <p>{{item.clue}}</p>
+                            <div class="d-flex justify-content-center">
+                                <img class="clue-image" :src="imageToShow(item)" alt="hidden clue" @click="toggleShow($event, item)">
+                            </div>
                         </div>
                     </div>
                 </div>
+                <button type="button" name="button" @click="$emit('back',false)">Back</button>
             </div>
-            <button type="button" name="button" @click="$emit('back',false)">Back</button>
-        </div>
 
+        </div>
     </div>
+
 </template>
 
 <script>
