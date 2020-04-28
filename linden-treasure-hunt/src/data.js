@@ -1,7 +1,7 @@
 const maps = [{
     id:1,
     title: "Rock Wall Hunt",
-    stamp: "/images/treasure/earth.jpg",
+    stamp: "/images/treasure/sattelite.jpg",
     level:"easy",
     location: "neighborhood",
     details:"A quick and easy hunt in the neighborhood to get everyone excited. Or, more honestly, to see if this is something they're into or not.",
@@ -27,7 +27,7 @@ const maps = [{
 {
     id:2,
     title: "Train Track Treasure",
-    stamp: "/images/treasure/ufo.jpg",
+    stamp: "/images/treasure/star.jpg",
     level:"easy",
     location: "woods",
     details:"Just into the woods and a safe place to watch the trains go by.",
@@ -57,16 +57,38 @@ const maps = [{
 },
 {
     id:3,
-    title: "Edge of the Woods",
-    stamp: "/images/treasure/rocket.jpg",
-    level:"easy",
+    title: "The Leaning Pine",
+    stamp: "/images/treasure/earth.jpg",
+    level:"medium",
     location: "woods",
-    details:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    details:"Down the path a little makes this a somewhat trickier. A big leaning pine tree helps this hiding spot stick out.",
+    clues:[
+        {
+            clue:"To start, enter the woods at the trailhead either at the end of Winslow Drive or Squire Way. Look for the trailhead markers that say 'Trail'",
+            image: "/images/clues/trailhead2.jpg",
+            clicked:false
+        },
+        {
+            clue:"Head towards the river and take the path that stays closest to the river. Keep the river on your left side. I'm not sure if this image clue is helpful, but it's supposed to show that you should keep to the left at forks to stay on the river path.",
+            image: "/images/clues/pathfork.jpg",
+            clicked:false
+        },
+        {
+            clue:"Be on the lookout for a big pine tree that leans far over the river, almost to the other side.",
+            image: "/images/clues/leaningpine.jpg",
+            clicked:false
+        },
+        {
+            clue:"The treasure is buried under a rock and a tree root at the base of a tree near the leaning pine",
+            image: "/images/clues/hidden.jpg",
+            clicked:false
+        },
+    ],
     parentsNeeded:true
 },
 {
     id:4,
-    title: "The Leaning Pine",
+    title: "Log Hole",
     stamp: "/images/treasure/sattelite.jpg",
     level:"hard",
     location: "woods",
@@ -75,7 +97,7 @@ const maps = [{
 },
 {
     id:5,
-    title: "Log Hole",
+    title: "Trail Wall Treasure",
     stamp: "/images/treasure/star.jpg",
     level:"easy",
     location: "neighborhood",

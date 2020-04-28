@@ -31,6 +31,7 @@
 </template>
 
 <script>
+
 export default {
     name:"showMap",
     props:["map"],
@@ -40,9 +41,10 @@ export default {
             showAllImages: false
         }
     },
-    computed:{
+    mounted(){
+            window.scrollTo(0,0);
+        },
 
-    },
     methods:{
         imageToShow:function(item){
             if (this.showAllImages) {
