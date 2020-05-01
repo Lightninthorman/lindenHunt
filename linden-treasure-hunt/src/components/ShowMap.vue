@@ -88,7 +88,7 @@ export default {
     }
 
     .clue-image{
-        max-width:200px;
+        max-height:200px;
         cursor: pointer;
     }
 
@@ -98,6 +98,10 @@ export default {
         }
         .stamp-image{
             width:100%;
+        }
+        .clue-image{
+            max-height:400px;
+            cursor: pointer;
         }
     }
 </style>

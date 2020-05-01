@@ -92,7 +92,34 @@ const maps = [{
     stamp: "/images/treasure/sattelite.jpg",
     level:"hard",
     location: "woods",
-    details:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    details:"Deep in the woods and a fun hiding spot, however there aren't many descriptive features nearby so stay vigilant. The hiding spot is slightly to the side of the trail.",
+    clues:[
+        {
+            clue:"To start, enter the woods at the trailhead either at the end of Winslow Drive or Squire Way. Look for the trailhead markers that say 'Trail'",
+            image: "/images/clues/trailhead2.jpg",
+            clicked:false
+        },
+        {
+            clue:"Take the trail along the river leading away from the train tracks. Keep to the left at forks to stay on the river path. You'll be on this path for a while.",
+            image: "/images/clues/pathfork.jpg",
+            clicked:false
+        },
+        {
+            clue:"You will cross a couple bridges and trudge through some muck. Eventually, you will come to a section of the trail where a large tree, and a few smaller ones, had fallen and have been cut to clear the path. You're close now!",
+            image: "/images/clues/holelogpath.jpg",
+            clicked:false
+        },
+        {
+            clue:"Not far ahead will be a cedar tree on your left. About 10ft beyond that and on your right will be a log with a hole in it.",
+            image: "/images/clues/holelogpath2.jpg",
+            clicked:false
+        },
+        {
+            clue:"Look inside the log with the hole in it and you will find the treasure.",
+            image: "/images/clues/hiddenlog.jpg",
+            clicked:false
+        }
+    ],
     parentsNeeded:true
 },
 {
