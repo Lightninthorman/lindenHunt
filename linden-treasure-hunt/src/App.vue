@@ -1,56 +1,27 @@
 <template>
   <div>
-    <!-- <page-header
-        :pages="pages"
-        :currentPage="currentPage"
-    >
-    </page-header> -->
     <navicon
         :pages="pages"
-        :currentPage="currentPage"
-        @pageChange="pageChange"
     >
     </navicon>
-    <home
-        v-if="currentPage === 'home'"
-
-    >
-</home>
-    <maps
-        v-if="currentPage === 'maps'"
+    <router-view
         :maps="allMaps"
+        :map="currentMap"
     >
-    </maps>
-    <challenges
-        v-if="currentPage === 'challenges'"
-        :maps="allMaps"
-    >
-    </challenges>
-    <new
-        v-if="currentPage === 'new'"
-    >
-    </new>
+    </router-view>
   </div>
 </template>
 
 <script>
 // import PageHeader from "./components/PageHeader.vue";
 import Navicon from "./components/Navicon.vue";
-import Home from "./components/Home.vue";
-import Maps from "./components/Maps.vue";
-import Challenges from "./components/Challenges.vue";
-import New from "./components/New.vue";
+
 import allMaps from "@/data.js";
 
 export default {
     name: "App",
     components: {
-        // PageHeader,
-        Navicon,
-        Home,
-        Maps,
-        Challenges,
-        New
+        Navicon
     },
     data: function(){
     return {
@@ -59,28 +30,28 @@ export default {
         allMaps: allMaps,
         pages: [
             {
-                page:"home",
+                page:"/",
                 display:"Home",
                 header:"Linden Commons Treasure Hunt",
                 icon:"/images/challenge-icon.png",
                 details:"challenges"
             },
             {
-                page:"maps",
+                page:"/maps",
                 display:"Maps",
                 header:"Maps",
                 icon:"/images/treasure-icon.png",
                 details:"Choose a map and start searching for treasure!"
             },
             {
-                page:"challenges",
+                page:"/challenges",
                 display:"Challenges",
                 header:"Challenges",
                 icon:"/images/challenge-icon.png",
                 details:"challenges"
             },
             {
-                page:"new",
+                page:"/new",
                 display:"New Map",
                 header:"Add New Map",
                 icon:"/images/add-map-icon.png",

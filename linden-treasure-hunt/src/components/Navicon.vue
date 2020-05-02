@@ -16,24 +16,22 @@
                         </button>
                     </div>
                     <div class="modal-body d-flex flex-column align-items-center">
-                        <div class="page-options close"
+                        <router-link :to="item.page" tag="div" class="page-options close"
                         data-dismiss="modal"
                             v-for="(item,index) in pages"
-                            :class="pageLinkStyle(item.page)"
                             :key="index"
-                            @click="$emit('pageChange', item.page)">
-
-                                <h3>{{item.display}}</h3>
-
-
-                        </div>
+                            >
+                                <h3>
+                                    {{item.display}}
+                                </h3>
+                        </router-link>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="showAll">
-            <div class="page-options mx-2"
+            <router-link :to="item.page" tag="div" class="page-options mx-2"
                 v-for="(item,index) in pages"
                 :class="pageLinkStyle(item.page)"
                 :key="index"
@@ -42,7 +40,7 @@
                     <h5>{{item.display}}</h5>
 
 
-            </div>
+            </router-link>
         </div>
 
 
@@ -53,7 +51,7 @@
 <script>
 export default {
     name:"navicon",
-    props:["pages","currentPage"],
+    props:["pages","currentPage","maps"],
     methods:{
         pageLinkStyle: function(page){
             if(page === this.currentPage){

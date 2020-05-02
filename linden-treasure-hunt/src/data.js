@@ -89,7 +89,7 @@ const maps = [{
 {
     id:4,
     title: "Log Hole",
-    stamp: "/images/treasure/sattelite.jpg",
+    stamp: "/images/treasure/ufo.jpg",
     level:"hard",
     location: "woods",
     details:"Deep in the woods and a fun hiding spot, however there aren't many descriptive features nearby so stay vigilant. The hiding spot is slightly to the side of the trail.",
@@ -125,19 +125,58 @@ const maps = [{
 {
     id:5,
     title: "Trail Wall Treasure",
-    stamp: "/images/treasure/star.jpg",
+    stamp: "/images/treasure/sun.jpg",
     level:"easy",
     location: "neighborhood",
-    details:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    details:"A brief woods adventure that doesn't count as leaving the neighborhood in my books.",
+    clues:[
+        {
+            clue:"Start down Winslow Drive toward the end of the circle. Make your way to the start of the trail leading into the woods.",
+            image: "/images/clues/trailhead1.jpg",
+            clicked:false
+        },
+        {
+            clue:"Walk along the trail leading away from the train tracks. Take the path that leads to the other trailhead on Squire Way.",
+            image: "/images/clues/pathforkright.jpg",
+            clicked:false
+        },
+        {
+            clue:"As you get close to the trailhead marker you'll notice that there is a retaining wall keeping the path in place. Is there a strange looking rock in the wall?",
+            image: "/images/clues/pathwall.jpg",
+            clicked:false
+        },
+        {
+            clue:"Here's an extra picture clue. Yes, there is a faster way to get to this spot, but where's the fun in that?",
+            image: "/images/clues/pathwall2.jpg",
+            clicked:false
+        }
+    ],
     parentsNeeded:false
 },
 {
     id:6,
-    title: "Who's Out There?",
-    stamp: "/images/treasure/sun.jpg",
+    title: "Yard Waste Treasure",
+    stamp: "/images/treasure/rocket.jpg",
     level:"medium",
     location: "neighborhood",
-    details:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    details:"Time to explore another part of the neighborhood.",
+    clues:[
+        {
+            clue:"As you head out of the neighborhood there is a small pond full of reeds called cattails, and next to the pond is a little house of mystery. What goes on in there? Walk to that house and check it out.",
+            image: "/images/clues/pumphouse.jpg",
+            clicked:false
+        },
+        {
+            clue:"Once you've figured out what goes on in the little house, continue down the road to the trailhead that starts at the curve in road.",
+            image: "/images/clues/distanttrailhead.jpg",
+            clicked:false
+        },
+        {
+            clue:"Head down the trail, but not too far. You'll quickly see a big fenced in area where everyone dumps their yard waste. It's surprisingly empty considering everyone uses it huh? I know I do. Totally. Anyway, one of the fence posts has a yellow hiking trail marker. Look under the rocks at the base of this post.",
+            image: "/images/clues/fencepost.jpg",
+            clicked:false
+        }
+    ],
     parentsNeeded:false
 }
 ]

@@ -1,7 +1,7 @@
 <template lang="html">
     <main class="container-fluid">
 
-        <div :style="mapShowStyle">
+        <div>
             <div class="my-4">
                 <h2>Maps</h2>
                 <p>Each map has clues that will lead you to the stamp treasure shown. Select a map below to go to the clues page and start collecting treasure in your notebooks! (The level rating for each is a guess)</p>
@@ -10,60 +10,27 @@
                 <div class="col-md-3"
                     v-for="(map,index) in maps"
                     :key="index"
-                    @click="selectMap(map)"
                 >
-                    <div class="page-options p-2 my-2">
+                <router-link :to="'/maps/' + map.id" tag="div" class="page-options p-2 my-2">
                         <img :src="map.stamp" :alt="map.title">
                         <h3>{{map.title}}</h3>
                         <p><span class="font-weight-bold">Level: </span>{{map.level}}</p>
                         <p><span class="font-weight-bold">Location: </span>{{map.location}}</p>
                         <p><span class="font-weight-bold">Details: </span>{{textSnippet(map.details)}}</p>
-                    </div>
 
+                </router-link>
                 </div>
             </div>
         </div>
-
-        <show-map :map="selectedMap" @back="selectMap" v-if="showMap"></show-map >
     </main>
 </template>
 
 <script>
 
-import ShowMap from "./ShowMap.vue";
-
-
 export default {
     name:"maps",
     props:['maps'],
-    data: function (){
-        return {
-            showMap: false,
-            selectedMap:{}
-        }
-    },
-    components:{
-        ShowMap
-    },
-    computed:{
-        mapShowStyle: function(){
-            if(this.showMap){
-                return "display:none";
-            }else{
-                return "display:block";
-            }
-        }
-    },
     methods:{
-        selectMap: function (mapChoice){
-            if(mapChoice){
-                this.showMap = true;
-                this.selectedMap = mapChoice;
-            }else{
-                this.showMap = false;
-                this.selectedMap = {}
-            }
-        },
         textSnippet: function(text){
             if(text.length >= 50){
                 let textArray = text.split(" ",10);
@@ -98,17 +65,15 @@ export default {
     }
 
     .page-options{
+        display: block;
         height:95%;
         border:3px solid #7D7672;
+        background-image: url("/images/mappaper.png");
         text-align: center;
         cursor:pointer;
         border-radius: 10px;
 
 
 
-    }
-    .options-container{
-        box-sizing: border-box;
-        border:1px solid green;
     }
 </style>

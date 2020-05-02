@@ -22,7 +22,7 @@
                         </div>
                     </div>
                 </div>
-                <button type="button" name="button" @click="$emit('back',false)">Back</button>
+                <!-- <button type="button" name="button" @click="$emit('back',false)">Back</button> -->
             </div>
 
         </div>
@@ -34,15 +34,22 @@
 
 export default {
     name:"showMap",
-    props:["map"],
+    props:["maps"],
     data:function(){
         return{
             questionMark:"/images/clues/questionmark.png",
-            showAllImages: false
+            showAllImages: false,
+            map:{}
         }
+    },
+    created(){
+        this.map = this.maps.find(item =>
+            item.id === Number(this.$route.params.id)
+        )
     },
     mounted(){
             window.scrollTo(0,0);
+
         },
 
     methods:{
@@ -85,6 +92,8 @@ export default {
 
     .clues{
         box-shadow:0 0 5px grey;
+        background-image: url("/images/mappaper2.png");
+        background-size: cover;
     }
 
     .clue-image{
