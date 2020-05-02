@@ -191,11 +191,11 @@ export default {
                 newMaps = newMaps.filter(function(map){
                     return map.parentsNeeded === false;
                 });
-                if (this.numberOfTreasures === this.maps.length) {
+                if (this.numberOfTreasures > newMaps.length) {
                     this.numberOfTreasures = newMaps.length;
                 }
-
             }
+
 
             //loop through the number of treasures the user inputs
             for(let i = 0; i < this.numberOfTreasures; i++ ){
