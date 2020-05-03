@@ -3,7 +3,7 @@
         <!-- <div class="logo" @click="$emit('pageChange', 'home')">
             <img src="/images/house_icon.png" alt="Linden Commons Treasure Hunt House Icon">
         </div> -->
-        <h1 class="text-center m-1" @click="$emit('pageChange', 'home')">Linden Commons Treasure Hunt</h1>
+        <router-link to="/" class="text-center m-1" tag="h1">Linden Commons Treasure Hunt</router-link>
         <img id="hamburger" class="showBurger" src="/images/hamburger_icon_1.png" data-toggle="modal" data-target="#navMenuModal"/>
 
         <div class="modal fade" id="navMenuModal" tabindex="-1" role="dialog" aria-labelledby="navMenuModal" aria-hidden="true">
@@ -68,6 +68,7 @@ export default {
         font-size: 26px;
         font-weight: 700;
         width:300px;
+        cursor: pointer;
     }
 
     nav{

@@ -1,6 +1,10 @@
 <template lang="html">
     <div>
-        <p>Click on the question marks to reveal a picture clue if the descriptions aren't clear enough.</p>
+        <div class="container-fluid">
+            <p>Click on the question marks to reveal a picture clue if the descriptions aren't clear enough.</p>
+            <p>Don't forget to put the treasure back the way you found it for the next person!</p>
+        </div>
+
         <div class="row m-2">
             <div class="col-md-2 my-2 d-flex justify-content-center align-items-start">
                 <img :src="map.stamp" :alt="map.title" class="stamp-image">
@@ -12,7 +16,7 @@
                 <p><span>Details: </span>{{map.details}}</p>
                 <div>
                     <h3 class="mb-3">Map Clues</h3>
-                    <button type="button" class="mb-4" @click="toggleAllShow">{{showAllImages ? "Hide all Image Clues": "Show all Image Clues"}}</button>
+                    <button type="button" class="btn btn-secondary mb-4" @click="toggleAllShow">{{showAllImages ? "Hide all Image Clues": "Show all Image Clues"}}</button>
                     <div class="mb-4 clues p-2" v-for="(item, key) in map.clues" :key="key">
                         <div>
                             <p>{{item.clue}}</p>
