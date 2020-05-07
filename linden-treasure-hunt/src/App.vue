@@ -15,8 +15,7 @@
 <script>
 // import PageHeader from "./components/PageHeader.vue";
 import Navicon from "./components/Navicon.vue";
-
-import allMaps from "@/data.js";
+import allMaps from "@/data.js"
 
 export default {
     name: "App",
@@ -33,28 +32,28 @@ export default {
                 page:"/",
                 display:"Home",
                 header:"Linden Commons Treasure Hunt",
-                icon:"/images/challenge-icon.png",
+                icon:"./components/images/challenge-icon.png",
                 details:"challenges"
             },
             {
                 page:"/maps",
                 display:"Maps",
                 header:"Maps",
-                icon:"/images/treasure-icon.png",
+                icon:"./components/images/treasure-icon.png",
                 details:"Choose a map and start searching for treasure!"
             },
             {
                 page:"/challenges",
                 display:"Challenges",
                 header:"Challenges",
-                icon:"/images/challenge-icon.png",
+                icon:"./components/images/challenge-icon.png",
                 details:"challenges"
             },
             {
                 page:"/new",
                 display:"New Map",
                 header:"Add New Map",
-                icon:"/images/add-map-icon.png",
+                icon:"./components/images/add-map-icon.png",
                 details:"Add your own map"
             }
         ]
