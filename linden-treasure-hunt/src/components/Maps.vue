@@ -68,7 +68,7 @@ export default {
         display: block;
         height:95%;
         border:3px solid #7D7672;
-        background-image: url("/images/mappaper.png");
+        background-image: url("./images/mappaper.png");
         text-align: center;
         cursor:pointer;
         border-radius: 10px;

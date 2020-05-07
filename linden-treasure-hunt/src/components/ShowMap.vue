@@ -41,7 +41,7 @@ export default {
     props:["maps"],
     data:function(){
         return{
-            questionMark:"/images/clues/questionmark.png",
+            questionMark:"/img/clues/questionmark.png",
             showAllImages: false,
             map:{}
         }
@@ -96,7 +96,7 @@ export default {
 
     .clues{
         box-shadow:0 0 5px grey;
-        background-image: url("/images/mappaper2.png");
+        background-image: url("./images/mappaper2.png");
         background-size: cover;
     }
 

@@ -4,7 +4,7 @@
             <img src="/images/house_icon.png" alt="Linden Commons Treasure Hunt House Icon">
         </div> -->
         <router-link to="/" class="text-center m-1" tag="h1">Linden Commons Treasure Hunt</router-link>
-        <img id="hamburger" class="showBurger" src="/images/hamburger_icon_1.png" data-toggle="modal" data-target="#navMenuModal"/>
+        <img id="hamburger" class="showBurger" src="./images/hamburger_icon_1.png" data-toggle="modal" data-target="#navMenuModal"/>
 
         <div class="modal fade" id="navMenuModal" tabindex="-1" role="dialog" aria-labelledby="navMenuModal" aria-hidden="true">
             <div class="modal-dialog" role="document">

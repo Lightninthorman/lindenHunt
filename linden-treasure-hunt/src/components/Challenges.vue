@@ -4,7 +4,7 @@
         <div class="container setTreasureAmnt my-2">
             <div class="my-3">
                 <p>Found all the treasures already? Know where they all are and think the fun is as dead as your hope for summer camp to open? Think again!</p>
-                <img class="center heart" src="/images/skull-crossbones.png" alt="skull and crossbones">
+                <img class="center heart" src="./images/skull-crossbones.png" alt="skull and crossbones">
                 <h3>How To Play</h3>
                 <ul>
                     <li>Divide a page in your notebook into a 3X3 grid like the one below.</li>
@@ -13,7 +13,7 @@
                     <li>Click on the "Build Challenge" button to populate the grid below.</li>
                     <li>The challenge is to now find those treasures and put the stamp in that location of the grid on your own page.</li>
                 </ul>
-                <img class="center" src="/images/treasure-icon.png" alt="Treasure Map">
+                <img class="center" src="./images/treasure-icon.png" alt="Treasure Map">
                 <h3>Variations</h3>
                 <ul>
                     <li>Get a group together and create a challenge for each of them (just click the button again) and then have them race to see who completes theirs first. <br>
@@ -81,47 +81,47 @@ export default {
             cellImg:[
                 {
                     filled:false,
-                    image:'/images/treasure/empty.png',
+                    image:'/img/treasure/empty.png',
                     alt:'empty'
                 },
                 {
                     filled:false,
-                    image:'/images/treasure/empty.png',
+                    image:'/img/treasure/empty.png',
                     alt:'empty'
                 },
                 {
                     filled:false,
-                    image:'/images/treasure/empty.png',
+                    image:'/img/treasure/empty.png',
                     alt:'empty'
                 },
                 {
                     filled:false,
-                    image:'/images/treasure/empty.png',
+                    image:'/img/treasure/empty.png',
                     alt:'empty'
                 },
                 {
                     filled:false,
-                    image:'/images/treasure/empty.png',
+                    image:'/img/treasure/empty.png',
                     alt:'empty'
                 },
                 {
                     filled:false,
-                    image:'/images/treasure/empty.png',
+                    image:'/img/treasure/empty.png',
                     alt:'empty'
                 },
                 {
                     filled:false,
-                    image:'/images/treasure/empty.png',
+                    image:'/img/treasure/empty.png',
                     alt:'empty'
                 },
                 {
                     filled:false,
-                    image:'/images/treasure/empty.png',
+                    image:'/img/treasure/empty.png',
                     alt:'empty'
                 },
                 {
                     filled:false,
-                    image:'/images/treasure/empty.png',
+                    image:'/img/treasure/empty.png',
                     alt:'empty'
                 }
             ],
@@ -139,47 +139,47 @@ export default {
             this.cellImg = [
                 {
                     filled:false,
-                    image:'/images/treasure/empty.png',
+                    image:'/img/treasure/empty.png',
                     alt:'empty'
                 },
                 {
                     filled:false,
-                    image:'/images/treasure/empty.png',
+                    image:'/img/treasure/empty.png',
                     alt:'empty'
                 },
                 {
                     filled:false,
-                    image:'/images/treasure/empty.png',
+                    image:'/img/treasure/empty.png',
                     alt:'empty'
                 },
                 {
                     filled:false,
-                    image:'/images/treasure/empty.png',
+                    image:'/img/treasure/empty.png',
                     alt:'empty'
                 },
                 {
                     filled:false,
-                    image:'/images/treasure/empty.png',
+                    image:'/img/treasure/empty.png',
                     alt:'empty'
                 },
                 {
                     filled:false,
-                    image:'/images/treasure/empty.png',
+                    image:'/img/treasure/empty.png',
                     alt:'empty'
                 },
                 {
                     filled:false,
-                    image:'/images/treasure/empty.png',
+                    image:'/img/treasure/empty.png',
                     alt:'empty'
                 },
                 {
                     filled:false,
-                    image:'/images/treasure/empty.png',
+                    image:'/img/treasure/empty.png',
                     alt:'empty'
                 },
                 {
                     filled:false,
-                    image:'/images/treasure/empty.png',
+                    image:'/img/treasure/empty.png',
                     alt:'empty'
                 }
             ];

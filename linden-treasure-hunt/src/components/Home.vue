@@ -2,7 +2,7 @@
   <main class="container-fluid">
       <div class="home-div">
           <div class="text-center">
-              <img src="/images/rainbow.jpg" alt="Linden Commons Rainbow">
+              <img src="./images/rainbow.jpg" alt="Linden Commons Rainbow">
 
           </div>
           <div id="home-description" class="p-3">

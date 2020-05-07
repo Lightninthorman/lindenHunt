@@ -18,8 +18,9 @@ const router = new VueRouter({
         {path:'/maps/:id', component: ShowMap, name: 'showmap'},
         {path:'/challenges', component: Challenges, name: 'challenges'},
         {path:'/new', component: New, name: 'new'},
-        {path:'*', component: Home, name: 'home'}
-    ]
+        {path:'/', component: Home, name: 'home'}
+    ],
+    publicPath:'/linden-treasure-hunt/'
 })
 
 new Vue({
